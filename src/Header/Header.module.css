@@ -61,10 +61,11 @@ h3 {
     display: flex;
     padding: 2rem;
 }
+
 .header_row div {
     flex-grow: 1;
-  flex-basis: calc(100% / 2);
-  padding: 4px 8px;
+    flex-basis: calc(100% / 2);
+    padding: 4px 8px;
 }
 
 .header_column {
@@ -79,6 +80,14 @@ h3 {
 .header_description {
     line-height: 40px;
 }
+
 .header_description_primary {
     display: block;
+}
+
+#markups {
+    height: 30rem;
+    width: auto;
+    fill: #A91D3A;
+    z-index: 1;
 }
