@@ -54,3 +54,19 @@ img:hover {
   --f: 1.1;
   /* hover scale */
 }
+
+#about svg {
+  width: 3rem;
+  height: 3rem;
+  transition: all 0.4s ease;
+  backface-visibility: hidden;
+  fill: #000;
+}
+
+#about a :hover {
+  transition: all 0.4s ease;
+
+  transform: translateY(-6px);
+  fill: rgb(1, 97, 239);
+
+}

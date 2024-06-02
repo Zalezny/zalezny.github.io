@@ -7,6 +7,8 @@ function About() {
     const aboutRef = useRef(null);
     const containerAboutImageRef = useRef(null);
     const containerAboutDescRef = useRef(null);
+    const githubRef = useRef(null);
+    const linkedinRef = useRef(null);
     useGSAP(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -17,6 +19,13 @@ function About() {
         );
         tl.from(containerAboutDescRef.current, { x: 400, opacity: 0, duration: 2 })
         tl.from(containerAboutImageRef.current, { scale: 0.1, opacity: 0, duration: 2 })
+        tl.from([githubRef.current, linkedinRef.current], { scale: 0.1, opacity: 0, duration: 1 })
+        // const tl2 = gsap.timeline({
+
+        //     start: "center bottom",
+        // }
+        // );
+        // tl2.from(linkRef.current, { scale: 0.1, opacity: 0, duration: 2 })
     });
     return (
         <section ref={aboutRef} id={styles.about}>
@@ -38,13 +47,26 @@ function About() {
                         Na codzień pracuje jako Mobile Developer, zajmując się tworzeniem aplikacji mobilnych na systemy Android oraz iOS w framework'u Flutter. Takze zajmuje się aplikacjami VR na urządzenie Vision Pro od firmy Apple.
                     </p>
                     <p>
-                        Moje portfolio i nie tylko znajdziesz poniżej:
+                        Więcej informacji o mnie znajdziesz poniżej:
                     </p>
+                    <div 
+                    style={{ display: 'flex', justifyContent: 'space-around', width: '15rem', paddingTop: '1rem' }}>
+                        <a ref={githubRef} href='#'>
+                            <svg >
+                                <use xlinkHref="src/assets/sprite.svg#icon-github"></use>
+                            </svg>
 
+                        </a>
+                        <a ref={linkedinRef} href='#'>
+                            <svg>
+                                <use xlinkHref="src/assets/sprite.svg#icon-linkedin"></use>
+                            </svg>
+                        </a >
+                    </div>
 
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 
