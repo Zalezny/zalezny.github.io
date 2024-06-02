@@ -3,28 +3,54 @@
 #about h3,
 #about h4,
 #about p {
-    color: #000;
+  color: #000;
 }
 
 #about {
-    margin: 90px 20rem;
-}
-
-
-
-.about_image {
-    margin: 0 auto;
-    width: 45%;
-    height: auto;
-    object-fit: cover;
-    aspect-ratio: 1;
-
+  margin: 90px 20rem;
 }
 
 .container_about p {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    justify-content: center;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  justify-content: center;
 }
 
 .sub_title_about_me {}
+
+.about_image {
+  --s: 350px;
+  /* image size */
+  --b: 6px;
+  /* border thickness */
+  --c: rgb(1, 97, 239);
+  /* border color */
+  --cb: #e9ecef;
+  /* background color */
+  --f: 1;
+  /* initial scale */
+
+  width: var(--s);
+  aspect-ratio: 1;
+  padding-top: calc(var(--s)/5);
+  cursor: pointer;
+  border-radius: 0 0 999px 999px;
+  --_g: 50%/calc(100%/var(--f)) 100% no-repeat content-box;
+  --_o: calc((1/var(--f) - 1)*var(--s)/2 - var(--b));
+  outline: var(--b) solid var(--c);
+  outline-offset: var(--_o);
+  background:
+    radial-gradient(circle closest-side,
+      var(--cb) calc(99% - var(--b)), var(--c) calc(100% - var(--b)) 99%, #0000) var(--_g);
+  -webkit-mask:
+    linear-gradient(#000 0 0) no-repeat 50% calc(1px - var(--_o)) / calc(100%/var(--f) - 2*var(--b) - 2px) 50%,
+    radial-gradient(circle closest-side, #000 99%, #0000) var(--_g);
+  transform: scale(var(--f));
+  transition: .5s;
+  margin-right: 5rem;
+}
+
+img:hover {
+  --f: 1.1;
+  /* hover scale */
+}
