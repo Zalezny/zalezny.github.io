@@ -1,0 +1,30 @@
+#about h1,
+#about h2,
+#about h3,
+#about h4,
+#about p {
+    color: #000;
+}
+
+#about {
+    margin: 90px 20rem;
+}
+
+
+
+.about_image {
+    margin: 0 auto;
+    width: 45%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1;
+
+}
+
+.container_about p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    justify-content: center;
+}
+
+.sub_title_about_me {}

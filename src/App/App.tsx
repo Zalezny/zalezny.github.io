@@ -1,5 +1,5 @@
-import About from './About/About.tsx';
-import Header from './Header/Header.tsx';
+import About from '../About/About.tsx';
+import Header from '../Header/Header.tsx';
 
 function App() {
 
