@@ -19,7 +19,7 @@ function Header() {
                         <h2 className={styles.header_description}>
                             I'm Daniel Nowak,
                             <span className={styles.header_description_primary}>
-                                specializing in fullstack apps
+                                specializing in Flutter & Kotlin apps
                             </span>
                         </h2>
                     </h1>
