@@ -19,9 +19,9 @@ function Experience() {
                 </div>
                 <div className={styles.container_experiences}>
                     <ul className={styles.bar}>
-                        <li><ExperienceCard title="Mobile Developer · Goodsoft" dateWork="08.2023 — Present" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa deleniti illum quas aspernatur eos omnis, rerum iure? Optio enim" skillsUsed={["Flutter", "Dart"]} /></li>
-                        <li><ExperienceCard title="Junior Flutter Developer · Ilaresoft" dateWork="08.2022 — 08.2023" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa deleniti illum quas aspernatur eos omnis, rerum iure? Optio enim" skillsUsed={["Flutter", "Dart"]} /></li>
-                        <li><ExperienceCard title="Intern Android Developer · SafetyHeads" dateWork="02.2023 — 06.2023" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa deleniti illum quas aspernatur eos omnis, rerum iure? Optio enim" skillsUsed={["Flutter", "Dart"]} /></li>
+                        <li><ExperienceCard title="Mobile Developer · Goodsoft" dateWork="10.2023 — Present" description="Budowanie, stylowanie i utrzymanie czystego kodu wysoko jakościowych aplikacji mobilnych oraz aplikacji VR. Jednym z większych projektów było utworzenie i wydanie aplikacji Erevie związanej z rynkiem nieruchomości." skillsUsed={["Flutter", "Dart", "GetIt", "Bloc", "Firebase", "VisionOS", "ARKit", "RealityKit", "Swift", "AdMob", "Testing", "AutoRoute"]} /></li>
+                        <li><ExperienceCard title="Junior Flutter Developer · Ilaresoft" dateWork="08.2022 — 09.2023" description="Developed and stylowanie aplikacji mobilnych firmy Vocale związanej z branzą muzyczną, analogiczna do Spotify, oraz tworzenie i utrzymywanie aplikacji mobilnych tworzonych dla klientów, m.in. aplikacji do wyszukiwania elektrycznych ładowarek Play&Plug" skillsUsed={["Flutter", "Dart", "Bloc", "Provider", "Firebase", "GraphQL", "Freezed"]} /></li>
+                        <li><ExperienceCard title="Intern Android Developer · SafetyHeads" dateWork="01.2023 — 06.2023" description="Poszerzanie wiedzy oraz aktywne tworzenie aplikacji wewnętrznej dla pracowników firmy z wykorzystaniem Clean Architecture + MVVM. " skillsUsed={["Kotlin", "Clean Architecture", "MVVM", "Koin", "Coroutines", "Flow", "Firebase", "Lottie"]} /></li>
                     </ul>
 
 
