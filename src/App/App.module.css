@@ -4,15 +4,14 @@
     color: white;
     font-size: 3rem;
     font-weight: 500;
-    margin-bottom: 4rem;
     text-align: center;
+    line-height: 4.5rem;
 }
 
 .heading::after {
     content: "";
     display: block;
-    margin: 0 auto 0 auto;
-    align-content: center;
+    align-items: center;
     width: 8rem;
     height: 0.2rem;
     background-color: white;

@@ -10,7 +10,7 @@ function Header() {
                     <li><a className={styles.navigation_item} href="#about">About</a></li>
                     <li><a className={styles.navigation_item} href="#skills">Skills</a></li>
                     <li><a className={styles.navigation_item} href="#experience">Experience</a></li>
-                    <li><a className={styles.navigation_item} href="#portfolio">Portfolio</a></li>
+                    <li><a className={styles.navigation_item} href="#projects">Projects</a></li>
                     <li><a className={styles.navigation_item} href="#contact">Contact</a></li>
                 </ul>
             </nav>

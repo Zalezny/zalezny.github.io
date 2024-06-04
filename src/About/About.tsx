@@ -14,18 +14,11 @@ function About() {
             scrollTrigger: {
                 trigger: aboutRef.current,
             },
-            start: "center bottom",
         }
         );
-        tl.from(containerAboutDescRef.current, { x: 400, opacity: 0, duration: 2 })
+        gsap.from(containerAboutDescRef.current, { x: 400, opacity: 0, duration: 2 })
         tl.from(containerAboutImageRef.current, { scale: 0.1, opacity: 0, duration: 2 })
         tl.from([githubRef.current, linkedinRef.current], { scale: 0.1, opacity: 0, duration: 1 })
-        // const tl2 = gsap.timeline({
-
-        //     start: "center bottom",
-        // }
-        // );
-        // tl2.from(linkRef.current, { scale: 0.1, opacity: 0, duration: 2 })
     });
     return (
         <section ref={aboutRef} id={styles.about}>
@@ -49,8 +42,8 @@ function About() {
                     <p>
                         Więcej informacji o mnie znajdziesz poniżej:
                     </p>
-                    <div 
-                    style={{ display: 'flex', justifyContent: 'space-around', width: '15rem', paddingTop: '1rem' }}>
+                    <div
+                        style={{ display: 'flex', justifyContent: 'space-around', width: '15rem', paddingTop: '1rem' }}>
                         <a ref={githubRef} href='#'>
                             <svg >
                                 <use xlinkHref="src/assets/sprite.svg#icon-github"></use>
