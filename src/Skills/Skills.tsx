@@ -1,5 +1,7 @@
 import Card from "./Card";
 import { SkillLogo } from "./utils/SkillLogo.ts";
+import styles from './Skills.module.css';
+import appStyles from '../App/App.module.css';
 function Skills() {
 
     const backend: SkillLogo[] = [
@@ -45,8 +47,9 @@ function Skills() {
     ];
 
     return (
-        <section id="skills" style={{ backgroundColor: 'rgb(3 6 32)' }}>
-            <div style={{ display: 'flex', marginRight: 'auto', marginLeft: 'auto', flexWrap: 'wrap', padding: '5rem' }}>
+        <section id={styles.skills}>
+            <h2 className={appStyles.heading}>Skills</h2>
+            <div className={styles.container_cards}>
                 <Card title="Backend" flex={1} logoList={backend} />
                 <Card title="Frontend" flex={1} logoList={frontend} />
                 <Card title="Mobile" flex={1.5} logoList={mobile} />
