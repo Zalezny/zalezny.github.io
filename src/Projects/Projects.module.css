@@ -28,6 +28,7 @@
     z-index: -1;
     margin-bottom: 0;
     margin-right: 0.5rem;
+
 }
 
 .project_item {
@@ -50,7 +51,7 @@
 }
 
 .container_texts {
-    
+
     display: flex;
     flex: 1;
     align-self: center;
@@ -58,4 +59,24 @@
     margin-top: 0;
     border-radius: 2rem;
     z-index: 1;
+}
+
+.btn {
+    background-color: rgb(1, 97, 239);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    padding: 15px 32px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto auto 1rem 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    transition: all 0.4s ease;
+    background-color: rgb(0, 83, 208);
 }

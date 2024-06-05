@@ -13,6 +13,7 @@ function ProjectCard({ srcCourrency, title, description, isNotebook }: { srcCour
             <div className={styles.container_texts} >
                 <h2 className={styles.title_project}>{title}</h2>
                 <p className={styles.description_project}>{description}</p>
+                <a href="#" className={styles.btn}>Link Button</a>
             </div>
 
         </div>
