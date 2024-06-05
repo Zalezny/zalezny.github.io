@@ -13,7 +13,6 @@ function ExperienceCard({ title, dateStart, dateEnd, description, skillsUsed }: 
                 <p className={styles.description}> {description}</p>
                 <ul className={styles.container_skills}>
                     {skillsUsed.map((skill) =>
-
                         <li className={styles.skill_item}>
                             {skill}
                         </li>)}

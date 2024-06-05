@@ -35,6 +35,14 @@
     transform: scale(1.05);
     transition: all 0.3s ease;
     background-color: rgba(0, 255, 221, 0.195);
+}
+
+.container_row:hover h3 {
+    color: rgb(70, 252, 225);
+}
+
+.container_row h3 {
+    transition: all 0.3s ease;
 
 }
 
