@@ -16,8 +16,6 @@
   justify-content: center;
 }
 
-.sub_title_about_me {}
-
 .about_image {
   --s: 350px;
   /* image size */
@@ -63,10 +61,12 @@ img:hover {
   fill: #000;
 }
 
+#about a {
+  margin: 1rem;
+}
+
 #about a :hover {
   transition: all 0.4s ease;
-
-  transform: translateY(-6px);
+  transform: translateY(-3px);
   fill: rgb(1, 97, 239);
-
 }

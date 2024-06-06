@@ -44,13 +44,13 @@ function About() {
                     </p>
                     <div
                         style={{ display: 'flex', justifyContent: 'space-around', width: '15rem', paddingTop: '1rem' }}>
-                        <a ref={githubRef} href='#'>
+                        <a ref={githubRef} href='https://github.com/Zalezny'>
                             <svg >
                                 <use xlinkHref="src/assets/sprite.svg#icon-github"></use>
                             </svg>
 
                         </a>
-                        <a ref={linkedinRef} href='#'>
+                        <a ref={linkedinRef} href='linkedin.com/in/zalezny/'>
                             <svg>
                                 <use xlinkHref="src/assets/sprite.svg#icon-linkedin"></use>
                             </svg>
