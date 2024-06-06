@@ -1,11 +1,11 @@
-#projects h1,
-#projects h2,
-#projects p {
+.projects h1,
+.projects h2,
+.projects p {
     color: black;
 }
 
 
-#projects {
+.projects {
     display: flex;
     flex-direction: column;
     margin: auto;

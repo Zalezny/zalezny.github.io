@@ -66,7 +66,7 @@ function Skills() {
     }, { scope: skillsRef })
 
     return (
-        <section ref={skillsRef} id={styles.skills}>
+        <section ref={skillsRef} id="skills" className={styles.skills}>
             <h2 ref={headingRef} className={appStyles.heading}>Skills</h2>
             <div ref={cardsRef} className={styles.container_cards}>
                 <Card key={'backend'} title="Backend" flex={1} logoList={backend} />

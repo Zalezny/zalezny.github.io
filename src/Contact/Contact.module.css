@@ -1,4 +1,4 @@
-#contact {
+.contact {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,6 +24,7 @@
     display: block;
     align-items: center;
 }
+
 
 .label_form_container {
     display: flex;
@@ -54,6 +55,10 @@
 
 .input_form textarea {
     min-height: 150px;
+}
+
+.input_form:focus {
+    outline-color: rgb(1, 97, 239);
 }
 
 

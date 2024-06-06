@@ -1,13 +1,24 @@
-#about h1,
-#about h2,
-#about h3,
-#about h4,
-#about p {
+.about h1,
+.about h2,
+.about h3,
+.about h4,
+.about p {
   color: #000;
 }
 
-#about {
-  margin: 90px 20rem;
+.about {
+  display: flex;
+  flex-direction: column;
+  margin: 00rem 20rem 10rem 20rem;
+
+}
+.heading {
+  margin-bottom: 5rem;
+  justify-content: center;
+  text-align: center;
+}
+.heading h1::after {
+  background-color: black;
 }
 
 .container_about p {
@@ -53,7 +64,7 @@ img:hover {
   /* hover scale */
 }
 
-#about svg {
+.about svg {
   width: 3rem;
   height: 3rem;
   transition: all 0.4s ease;
@@ -61,12 +72,12 @@ img:hover {
   fill: #000;
 }
 
-#about a {
+.about a {
   margin: 1rem;
 }
 
-#about a :hover {
+.about a :hover {
   transition: all 0.4s ease;
-  transform: translateY(-3px);
+  transform: scale(1.5);
   fill: rgb(1, 97, 239);
 }

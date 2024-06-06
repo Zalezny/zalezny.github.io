@@ -2,12 +2,19 @@ import styles from './Header.module.css'
 import Markup from './Markup'
 
 function Header() {
+
+    // useEffect(() => {
+    //     const observer = new IntersectionObserver((entries) => {
+    //         const entry = entries[0];
+    //     });
+    // });
+
     return (
-        <header>
-            <nav>
+        <header >
+            <nav className='navigation'>
                 <ul className={styles.navigation_list}>
-                    <li key='header'><a className={styles.navigation_item} href="#header">Home</a></li>
-                    <li key='about'><a className={styles.navigation_item} href="#about">About</a></li>
+                    <li key='header'><a className={styles.navigation_item} href='#header'>Home</a></li>
+                    <li key='about'><a className={styles.navigation_item} href='#about'>About</a></li>
                     <li key='skills'><a className={styles.navigation_item} href="#skills">Skills</a></li>
                     <li key='experience'><a className={styles.navigation_item} href="#experience">Experience</a></li>
                     <li key='projects'><a className={styles.navigation_item} href="#projects">Projects</a></li>

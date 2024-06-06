@@ -22,3 +22,10 @@ body {
     margin: 0;
 }
 
+:root {
+    scrollbar-color: rgb(1, 97, 239) rgb(3 6 32);
+}
+
+::selection {
+    background: rgba(1, 96, 239, 0.343);
+}

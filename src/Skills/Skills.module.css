@@ -1,4 +1,4 @@
-#skills {
+.skills {
   display: flex;
   flex-direction: column;
   background-color: rgb(3 6 32);

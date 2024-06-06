@@ -32,7 +32,7 @@ function Experience() {
     });
 
     return (
-        <section ref={experienceRef} id={styles.experience}>
+        <section ref={experienceRef} id='experience' className={styles.experience}>
             <h1 ref={headingRef} className={appStyles.heading}>Experience</h1>
             <div className={styles.container}>
 

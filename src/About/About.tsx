@@ -1,4 +1,5 @@
 import styles from './About.module.css'
+import appStyles from '../App/App.module.css'
 import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -10,6 +11,7 @@ function About() {
     const containerAboutImageRef = useRef(null);
     const containerAboutDescRef = useRef(null);
     const githubRef = useRef(null);
+    const headingRef = useRef(null);
     const linkedinRef = useRef(null);
     useGSAP(() => {
         const tl = gsap.timeline({
@@ -19,21 +21,25 @@ function About() {
             },
         }
         );
+        tl.from(headingRef.current, { y: 10, opacity: 0, duration: 1 })
         tl.from(containerAboutDescRef.current, { x: 400, opacity: 0, duration: 1 })
         tl.from(containerAboutImageRef.current, { scale: 0.1, opacity: 0, duration: 1 })
         tl.from([githubRef.current, linkedinRef.current], { scale: 0.1, opacity: 0, duration: 1 })
     }, {});
     return (
-        <section ref={aboutRef} id={styles.about}>
+        <section ref={aboutRef} id='about' className={styles.about}>
+            <div ref={headingRef} className={styles.heading}>
+                <h1 className={appStyles.heading} >About Me</h1>
+
+            </div>
             <div style={{ display: "flex", padding: '2px' }}>
+
                 <div ref={containerAboutImageRef} className={styles.container_about_image}>
                     <img className={styles.about_image} style={{ flex: "0" }} src="/src/assets/avatar.png" />
                 </div>
 
                 <div ref={containerAboutDescRef} className={styles.container_about} style={{ flex: "1", whiteSpace: '1px' }}>
-                    <h1 style={{ color: '#000', fontSize: 35, margin: '0px 0px' }} >About Me
 
-                    </h1>
                     <h2 className={styles.sub_title_about_me} style={{ color: '#000', margin: '10px 0px', fontSize: 25 }}>
                         Mobile Developer
                     </h2>
