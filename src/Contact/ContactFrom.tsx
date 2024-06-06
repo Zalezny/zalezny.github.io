@@ -40,18 +40,18 @@ const ContactForm = () => {
             <form className={styles.contact_form} onSubmit={sendEmail}>
                 <div className={styles.label_form_container}>
                     <label className={styles.label_form}>Name</label>
-                    <input className={styles.input_form} type="text" name="user_name" />
+                    <input className={styles.input_form} type="text" name="user_name" placeholder='Enter Your Name' />
                 </div>
                 <div className={styles.label_form_container}>
                     <label className={styles.label_form}>Email</label>
-                    <input className={styles.input_form} type="email" name="user_email" />
+                    <input className={styles.input_form} type="email" name="user_email" placeholder='Enter Your Email' />
                 </div>
                 <div className={styles.label_form_container}>
-                    <label className={styles.label_form}>Message</label>
-                    <textarea className={styles.input_form} name="message" />
+                    <label className={styles.label_form} aria-placeholder='Enter Your Message'>Message</label>
+                    <textarea className={styles.input_form} name="message" cols={30} rows={10} placeholder='Enter Your Message' />
                 </div>
 
-                <input type="submit" value="Send" disabled={isSubmitting} />
+                <input className={styles.submit_btn} type="submit" value="Submit" disabled={isSubmitting} />
                 {stateMessage && <p>{stateMessage}</p>}
             </form>
         </div>

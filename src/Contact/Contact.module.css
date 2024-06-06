@@ -14,6 +14,8 @@
     width: 95%;
     border-radius: 5px;
     margin: 5rem auto 0 auto;
+    margin: 10rem;
+
 }
 
 
@@ -26,13 +28,53 @@
 .label_form_container {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
 }
 
 .label_form {
+    display: block;
     color: black;
+    text-align: left;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .input_form {
-    color: black;
+    color: #666;
+    padding: 1.5rem;
+    border: 1px solid #ebebeb;
+    font-size: 1rem;
+    letter-spacing: 0px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    font-weight: 600;
+}
 
+.input_form textarea {
+    min-height: 150px;
+}
+
+
+.submit_btn {
+    background-color: rgb(1, 97, 239);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: auto 1rem 1rem 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.submit_btn:hover {
+    transform: translateY(-2px);
+    transition: all 0.4s ease;
+    background-color: rgb(0, 83, 208);
 }

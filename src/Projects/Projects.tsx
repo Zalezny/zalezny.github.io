@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard';
 function Projects() {
     return (
         <section id={styles.projects}>
-            <h1 className={appStyles.heading}>Projects</h1>
+            <h1 className={[appStyles.heading, styles.heading].join(' ')}>Projects</h1>
             <div className={styles.container_projects}>
                 <ProjectCard srcCourrency={['currencyapp.png', 'currencyapp1.png', 'currencyapp2.png']} title='Currency App' isNotebook={false} description='The application has been divided into two screens: the first one displaying the current exchange rates for EUR and USD currencies. Depending on the state returned from the Bloc architecture (Loading, Success, Failed), the following elements appear accordingly: Shimmers (without the "Refresh" button), UI consistent with the data fetched from the API, Shimmers with the "Refresh" button.'
                     links={[

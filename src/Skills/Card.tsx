@@ -7,7 +7,7 @@ function Card({ title, flex, logoList }: { title: string, flex: number, logoList
         <div className={styles.card} style={{
             flex: flex, borderColor: '#fff', borderWidth: '5px', margin: '1rem 2rem 1rem 2rem', backgroundColor: '#fff', padding: '10px'
         }}>
-            <div style={{ backgroundColor: '#3BDB85' }}>
+            <div className={styles.card_top}>
                 <h2 style={{ alignContent: 'top', textAlign: 'center', padding: '1rem', margin: 0 }}>{title}</h2>
             </div>
 
