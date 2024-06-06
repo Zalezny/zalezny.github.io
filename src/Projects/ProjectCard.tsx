@@ -6,7 +6,7 @@ function ProjectCard({ srcCourrency, title, description, isNotebook, links }: { 
         <div className={styles.project_item} >
             <div className={styles.container_img}>
                 {srcCourrency.map((src) =>
-                    <div className={styles.image}> <img src={'/src/assets/' + src} alt={title} style={{ maxWidth: isNotebook ? '42rem' : '14rem' }} /></div>
+                    <div key={src} className={styles.image}> <img src={'/src/assets/' + src} alt={title} style={{ maxWidth: isNotebook ? '42rem' : '14rem' }} /></div>
                 )}
 
             </div>
@@ -14,7 +14,7 @@ function ProjectCard({ srcCourrency, title, description, isNotebook, links }: { 
                 <h2 className={styles.title_project}>{title}</h2>
                 <p className={styles.description_project}>{description}</p>
                 <div className={styles.container_btns}>
-                    {links.map((link) => <a href={link.link} className={styles.btn}>{link.btnName}</a>)}
+                    {links.map((link) => <a key={link.link} href={link.link} className={styles.btn}>{link.btnName}</a>)}
                 </div>
 
             </div>

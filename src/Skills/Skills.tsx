@@ -2,6 +2,10 @@ import Card from "./Card";
 import { SkillLogo } from "./utils/SkillLogo.ts";
 import styles from './Skills.module.css';
 import appStyles from '../App/App.module.css';
+import { useGSAP } from "@gsap/react";
+import { useRef } from 'react';
+import { gsap } from 'gsap';
+
 function Skills() {
 
     const backend: SkillLogo[] = [
@@ -46,15 +50,30 @@ function Skills() {
         new SkillLogo('Android Studio', 'androidstudio.webp'),
     ];
 
+    const skillsRef = useRef(null);
+    const cardsRef = useRef(null);
+    const headingRef = useRef(null);
+
+    useGSAP(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: skillsRef.current,
+                start: "top center",
+            }
+        });
+        tl.from(cardsRef.current, { y: 40, opacity: 0, duration: 1 })
+        tl.from(headingRef.current, { y: 10, opacity: 0, duration: 2 })
+    }, { scope: skillsRef })
+
     return (
-        <section id={styles.skills}>
-            <h2 className={appStyles.heading}>Skills</h2>
-            <div className={styles.container_cards}>
-                <Card title="Backend" flex={1} logoList={backend} />
-                <Card title="Frontend" flex={1} logoList={frontend} />
-                <Card title="Mobile" flex={1.5} logoList={mobile} />
-                <Card title="VR" flex={1} logoList={vr} />
-                <Card title="Other" flex={1} logoList={other} />
+        <section ref={skillsRef} id={styles.skills}>
+            <h2 ref={headingRef} className={appStyles.heading}>Skills</h2>
+            <div ref={cardsRef} className={styles.container_cards}>
+                <Card key={'backend'} title="Backend" flex={1} logoList={backend} />
+                <Card key={'frontend'} title="Frontend" flex={1} logoList={frontend} />
+                <Card key={'mobile'} title="Mobile" flex={1.5} logoList={mobile} />
+                <Card key={'vr'} title="VR" flex={1} logoList={vr} />
+                <Card key={'other'} title="Other" flex={1} logoList={other} />
             </div>
         </section>
     );

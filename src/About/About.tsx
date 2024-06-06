@@ -2,6 +2,8 @@ import styles from './About.module.css'
 import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 function About() {
     const aboutRef = useRef(null);
@@ -13,13 +15,14 @@ function About() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: aboutRef.current,
+                start: "top center",
             },
         }
         );
-        gsap.from(containerAboutDescRef.current, { x: 400, opacity: 0, duration: 2 })
-        tl.from(containerAboutImageRef.current, { scale: 0.1, opacity: 0, duration: 2 })
+        tl.from(containerAboutDescRef.current, { x: 400, opacity: 0, duration: 1 })
+        tl.from(containerAboutImageRef.current, { scale: 0.1, opacity: 0, duration: 1 })
         tl.from([githubRef.current, linkedinRef.current], { scale: 0.1, opacity: 0, duration: 1 })
-    });
+    }, {});
     return (
         <section ref={aboutRef} id={styles.about}>
             <div style={{ display: "flex", padding: '2px' }}>

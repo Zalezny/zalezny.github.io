@@ -6,12 +6,12 @@ function Header() {
         <header>
             <nav>
                 <ul className={styles.navigation_list}>
-                    <li><a className={styles.navigation_item} href="#header">Home</a></li>
-                    <li><a className={styles.navigation_item} href="#about">About</a></li>
-                    <li><a className={styles.navigation_item} href="#skills">Skills</a></li>
-                    <li><a className={styles.navigation_item} href="#experience">Experience</a></li>
-                    <li><a className={styles.navigation_item} href="#projects">Projects</a></li>
-                    <li><a className={styles.navigation_item} href="#contact">Contact</a></li>
+                    <li key='header'><a className={styles.navigation_item} href="#header">Home</a></li>
+                    <li key='about'><a className={styles.navigation_item} href="#about">About</a></li>
+                    <li key='skills'><a className={styles.navigation_item} href="#skills">Skills</a></li>
+                    <li key='experience'><a className={styles.navigation_item} href="#experience">Experience</a></li>
+                    <li key='projects'><a className={styles.navigation_item} href="#projects">Projects</a></li>
+                    <li key='contact'><a className={styles.navigation_item} href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div className={styles.header_row}>

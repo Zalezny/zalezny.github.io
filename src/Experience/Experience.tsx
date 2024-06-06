@@ -3,25 +3,48 @@ import ExperienceCard from './ExperienceCard';
 import appStyles from '../App/App.module.css';
 import Lottie from "lottie-react";
 import expAnimation from "../assets/exp.json";
+import { useGSAP } from '@gsap/react';
+import { gsap } from 'gsap';
+import { useRef } from 'react';
 
 
 // https://lottiefiles.com/animations/user-experience-G6cCp0ZCAU?from=search
 
 function Experience() {
+    const skillsContainerRef = useRef(null);
+    const experienceRef = useRef(null);
+    const headingRef = useRef(null);
+    const mobileDevRef = useRef(null);
+    const flutterDevRef = useRef(null);
+    const internDevRef = useRef(null);
+    useGSAP(() => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: experienceRef.current,
+                start: "top center",
+            }
+        });
+        tl.from(headingRef.current, { y: 20, opacity: 0, duration: 1 })
+        tl.from(internDevRef.current, { x: 20, opacity: 0, duration: 1 })
+        tl.from(flutterDevRef.current, { x: 20, opacity: 0, duration: 1 })
+        tl.from(mobileDevRef.current, { x: 20, opacity: 0, duration: 1 })
+
+    });
 
     return (
-        <section id={styles.experience}>
-            <h1 className={appStyles.heading}>Experience</h1>
+        <section ref={experienceRef} id={styles.experience}>
+            <h1 ref={headingRef} className={appStyles.heading}>Experience</h1>
             <div className={styles.container}>
 
                 <div className={styles.container_header}>
                     <Lottie className={styles.lottie_animation} animationData={expAnimation} initialSegment={[90, 270]} />
                 </div>
-                <div className={styles.container_experiences}>
+                <div ref={skillsContainerRef} className={styles.container_experiences}>
                     <ul className={styles.bar}>
-                        <li><ExperienceCard title="Mobile Developer · Goodsoft" dateStart="10.2023" dateEnd="now" description="Budowanie, stylowanie i utrzymanie czystego kodu wysoko jakościowych aplikacji mobilnych oraz aplikacji VR. Jednym z większych projektów było utworzenie i wydanie aplikacji Erevie związanej z rynkiem nieruchomości." skillsUsed={["Flutter", "Dart", "GetIt", "Bloc", "Firebase", "VisionOS", "ARKit", "RealityKit", "Swift", "AdMob", "Testing", "AutoRoute"]} /></li>
-                        <li><ExperienceCard title="Junior Flutter Developer · Ilaresoft" dateStart="08.2022" dateEnd="09.2023" description="Developed and stylowanie aplikacji mobilnych firmy Vocale związanej z branzą muzyczną, analogiczna do Spotify, oraz tworzenie i utrzymywanie aplikacji mobilnych tworzonych dla klientów, m.in. aplikacji do wyszukiwania elektrycznych ładowarek Play&Plug" skillsUsed={["Flutter", "Dart", "Bloc", "Provider", "Firebase", "GraphQL", "Freezed"]} /></li>
-                        <li><ExperienceCard title="Intern Android Developer · SafetyHeads" dateStart="01.2023" dateEnd="06.2023" description="Poszerzanie wiedzy oraz aktywne tworzenie aplikacji wewnętrznej dla pracowników firmy z wykorzystaniem Clean Architecture + MVVM." skillsUsed={["Kotlin", "Clean Architecture", "MVVM", "Koin", "Coroutines", "Flow", "Firebase", "Lottie"]} /></li>
+
+                        <li key='mobile dev'><ExperienceCard containerRowRef={mobileDevRef} link="https://goodsoft.pl/" title="Mobile Developer · Goodsoft" dateStart="10.2023" dateEnd="now" description="Budowanie, stylowanie i utrzymanie czystego kodu wysoko jakościowych aplikacji mobilnych oraz aplikacji VR. Jednym z większych projektów było utworzenie i wydanie aplikacji Erevie związanej z rynkiem nieruchomości." skillsUsed={["Flutter", "Dart", "GetIt", "Bloc", "Firebase", "VisionOS", "ARKit", "RealityKit", "Swift", "AdMob", "Testing", "AutoRoute"]} /></li>
+                        <li key='junior flutter'><ExperienceCard containerRowRef={flutterDevRef} link='https://ilaresoft.com/' title="Junior Flutter Developer · Ilaresoft" dateStart="08.2022" dateEnd="09.2023" description="Developed and stylowanie aplikacji mobilnych firmy Vocale związanej z branzą muzyczną, analogiczna do Spotify, oraz tworzenie i utrzymywanie aplikacji mobilnych tworzonych dla klientów, m.in. aplikacji do wyszukiwania elektrycznych ładowarek Play&Plug" skillsUsed={["Flutter", "Dart", "Bloc", "Provider", "Firebase", "GraphQL", "Freezed"]} /></li>
+                        <li key='intern android'><ExperienceCard containerRowRef={internDevRef} link='https://safetyheads.com/' title="Intern Android Developer · SafetyHeads" dateStart="01.2023" dateEnd="06.2023" description="Poszerzanie wiedzy oraz aktywne tworzenie aplikacji wewnętrznej dla pracowników firmy z wykorzystaniem Clean Architecture + MVVM." skillsUsed={["Kotlin", "Clean Architecture", "MVVM", "Koin", "Coroutines", "Flow", "Firebase", "Lottie"]} /></li>
                     </ul>
 
 

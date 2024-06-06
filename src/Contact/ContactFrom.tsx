@@ -17,6 +17,7 @@ const ContactForm = () => {
             )
             .then(
                 (_) => {
+                    console.log('Email sent!');
                     setStateMessage('Email sent!');
                     setIsSubmitting(false);
                     setTimeout(() => {
@@ -24,6 +25,7 @@ const ContactForm = () => {
                     }, 5000); // hide message after 5 seconds
                 },
                 (_) => {
+                    console.log('Email failed to send');
                     setStateMessage('Email failed to send');
                     setIsSubmitting(false);
                     setTimeout(() => {

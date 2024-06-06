@@ -14,7 +14,7 @@ function Card({ title, flex, logoList }: { title: string, flex: number, logoList
             <div className={styles.container_logo_list} style={{ gridTemplateColumns: flex == 1 ? '1fr' : '1fr 1fr' }}>
                 {
                     logoList.map((logo) =>
-                        <div className={styles.container_img_with_tooltip}>
+                        <div key={logo.name} className={styles.container_img_with_tooltip}>
                             <span className={styles.tooltip_text}>{logo.name}</span>
 
                             <div className={styles.container_img}>

@@ -5,6 +5,11 @@
     background-color: rgb(3 6 32);
 }
 
+a{
+    text-decoration: none;
+
+}
+
 .container {
     display: flex;
     padding: 2rem;
@@ -35,15 +40,29 @@
     transform: scale(1.05);
     transition: all 0.3s ease;
     background-color: rgba(0, 255, 221, 0.195);
+    cursor: pointer;
 }
 
 .container_row:hover h3 {
     color: rgb(70, 252, 225);
 }
 
+.container_row:hover svg {
+    transform: translateY(-3px);
+    color: rgb(70, 252, 225);
+}
+
 .container_row h3 {
     transition: all 0.3s ease;
+}
 
+.container_title {
+    display: flex;
+}
+
+.container_title svg {
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 .date_work {
