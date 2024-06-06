@@ -38,12 +38,13 @@ function About() {
                         Mobile Developer
                     </h2>
                     <p style={{ color: '#000' }}>
-                        Pasjonat dobrze napisanego kodu i nowych technologii. Osoba z dużym zacięciem do nauki i chęcią ciągłego rozwoju. W swojej pracy stawiam na jakość i dbałość o detale. Swoją wiedzę zdobywam poprzez tworzenie i ulepszanie licznych aplikacji mobilnych z wykorzystaniem technologii takich jak Flutter, Kotlin, Swift.</p>
-                    <p>
-                        Na codzień pracuje jako Mobile Developer, zajmując się tworzeniem aplikacji mobilnych na systemy Android oraz iOS w framework'u Flutter. Takze zajmuje się aplikacjami VR na urządzenie Vision Pro od firmy Apple.
+                        A passionate enthusiast of well-written code and new technologies. A person with a strong inclination towards learning and a desire for continuous development. In my work, I prioritize quality and attention to detail. I gain my knowledge by creating and improving numerous mobile applications using technologies such as Flutter, Kotlin, and Swift.
                     </p>
                     <p>
-                        Więcej informacji o mnie znajdziesz poniżej:
+                        On a daily basis, I work as a Mobile Developer, creating mobile applications for Android and iOS using the Flutter framework. I also work on VR applications for Apple's Vision Pro device.
+                    </p>
+                    <p>
+                        You can find more information about me below:
                     </p>
                     <div
                         style={{ display: 'flex', justifyContent: 'space-around', width: '15rem', paddingTop: '1rem' }}>
