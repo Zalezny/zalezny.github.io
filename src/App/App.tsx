@@ -1,4 +1,5 @@
 import About from '../About/About.tsx';
+import Contact from '../Contact/Contact.tsx';
 import Experience from '../Experience/Experience.tsx';
 import Header from '../Header/Header.tsx';
 import Projects from '../Projects/Projects.tsx';
@@ -13,6 +14,7 @@ function App() {
       <Skills />
       <Experience />
       <Projects />
+      <Contact />
     </>
   )
 }

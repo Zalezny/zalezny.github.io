@@ -1,0 +1,38 @@
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(3 6 32);
+}
+
+.container_contact_form {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: white;
+    padding: 4rem;
+    max-width: 80rem;
+    text-align: right;
+    width: 95%;
+    border-radius: 5px;
+    margin: 5rem auto 0 auto;
+}
+
+
+
+.contact_form {
+    display: block;
+    align-items: center;
+}
+
+.label_form_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.label_form {
+    color: black;
+}
+
+.input_form {
+    color: black;
+
+}
