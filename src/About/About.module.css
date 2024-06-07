@@ -9,14 +9,17 @@
 .about {
   display: flex;
   flex-direction: column;
-  margin: 00rem 20rem 10rem 20rem;
+  margin: 0rem 20rem 10rem 20rem;
+  padding: 6rem 0;
 
 }
+
 .heading {
   margin-bottom: 5rem;
   justify-content: center;
   text-align: center;
 }
+
 .heading h1::after {
   background-color: black;
 }

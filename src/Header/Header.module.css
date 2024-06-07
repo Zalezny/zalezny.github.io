@@ -73,3 +73,12 @@
 .navigation {
     transition: all 0.3s ease-in-out;
 }
+
+.sticky {
+    background-color: #131530;
+    box-shadow: 0 1px 5px rgb(1, 97, 239, 0.425);
+    border-bottom: 0.4rem solid rgb(1, 97, 239);
+    position: fixed;
+    z-index: 100;
+}
+

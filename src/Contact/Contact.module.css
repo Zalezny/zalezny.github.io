@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     background-color: rgb(3 6 32);
+    padding: 5rem 0;
 }
 
 .container_contact_form {
