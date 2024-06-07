@@ -1,8 +1,9 @@
-import styles from './Skills.module.css'
+import styles from './Skills.module.css';
 import { SkillLogo } from "./utils/SkillLogo.ts";
 
 function Card({ title, flex, logoList }: { title: string, flex: number, logoList: SkillLogo[] }) {
     const startPath = 'src/assets/logos';
+
     return (
         <div className={styles.card} style={{
             flex: flex, borderColor: '#fff', borderWidth: '5px', margin: '1rem 2rem 1rem 2rem', backgroundColor: '#fff', padding: '10px'

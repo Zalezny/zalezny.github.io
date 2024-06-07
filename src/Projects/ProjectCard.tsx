@@ -10,10 +10,10 @@ function ProjectCard({ srcCourrency, title, description, isNotebook, links }: { 
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: projectItemRef.current,
-                start: "bottom bottom",
+                start: "top center",
             }
         });
-        tl.from(projectItemRef.current, { x: 20, opacity: 0, duration: 2 })
+        tl.from(projectItemRef.current, { x: 20, opacity: 0, duration: 1 })
     });
 
     return (
