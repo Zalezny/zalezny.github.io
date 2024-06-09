@@ -41,7 +41,7 @@ a {
     transition: all 0.3s ease;
     transform: scale(1.5);
     background-color: rgba(0, 255, 221, 0.195);
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .container_row:hover h3 {
