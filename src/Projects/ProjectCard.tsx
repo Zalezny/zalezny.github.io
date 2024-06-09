@@ -20,7 +20,7 @@ function ProjectCard({ srcCourrency, title, description, isNotebook, links }: { 
         <div ref={projectItemRef} className={styles.project_item} >
             <div className={styles.container_img}>
                 {srcCourrency.map((src) =>
-                    <div key={src} className={styles.image}> <img src={'/src/assets/' + src} alt={title} style={{ maxWidth: isNotebook ? '42rem' : '14rem' }} /></div>
+                    <div key={src} className={styles.image}> <img src={src} alt={title} style={{ maxWidth: isNotebook ? '42rem' : '14rem' }} /></div>
                 )}
 
             </div>

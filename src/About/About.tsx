@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import avatar from '../assets/avatar.png'
 gsap.registerPlugin(ScrollTrigger);
 
 function About() {
@@ -35,7 +36,7 @@ function About() {
             <div style={{ display: "flex", padding: '2px' }}>
 
                 <div ref={containerAboutImageRef} className={styles.container_about_image}>
-                    <img className={styles.about_image} style={{ flex: "0" }} src="/src/assets/avatar.png" />
+                    <img className={styles.about_image} style={{ flex: "0" }} src={avatar} />
                 </div>
 
                 <div ref={containerAboutDescRef} className={styles.container_about} style={{ flex: "1", whiteSpace: '1px' }}>

@@ -2,7 +2,7 @@ import styles from './Skills.module.css';
 import { SkillLogo } from "./utils/SkillLogo.ts";
 
 function Card({ title, flex, logoList }: { title: string, flex: number, logoList: SkillLogo[] }) {
-    const startPath = 'src/assets/logos';
+    const startPath = 'logos/';
 
     return (
         <div className={styles.card} style={{
