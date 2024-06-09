@@ -7,7 +7,7 @@ function Footer() {
                 <div className={styles.about_container_icons_box}>
                     <a href="https://github.com/Zalezny">
                         <svg>
-                            <use xlinkHref="src/assets/sprite.svg#icon-github"></use>
+                            <use xlinkHref="assets/sprite.svg#icon-github"></use>
                         </svg>
                     </a>
                 </div>
@@ -19,7 +19,7 @@ function Footer() {
                 <div className={styles.about_container_icons_box}>
                     <a href='https://www.linkedin.com/in/zalezny/'>
                         <svg>
-                            <use xlinkHref="src/assets/sprite.svg#icon-linkedin"></use>
+                            <use xlinkHref="assets/sprite.svg#icon-linkedin"></use>
                         </svg>
                     </a>
                 </div>

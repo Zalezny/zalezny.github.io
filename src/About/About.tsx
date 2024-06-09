@@ -58,7 +58,7 @@ function About() {
                         <div className={styles.container_item_box}>
                             <a ref={githubRef} href='https://github.com/Zalezny'>
                                 <svg >
-                                    <use xlinkHref="src/assets/sprite.svg#icon-github"></use>
+                                    <use xlinkHref="sprite.svg#icon-github"></use>
                                 </svg>
 
                             </a>
@@ -67,7 +67,7 @@ function About() {
                         <div className={styles.container_item_box}>
                             <a ref={linkedinRef} href='linkedin.com/in/zalezny/'>
                                 <svg>
-                                    <use xlinkHref="src/assets/sprite.svg#icon-linkedin"></use>
+                                    <use xlinkHref="sprite.svg#icon-linkedin"></use>
                                 </svg>
                             </a >
                         </div>
