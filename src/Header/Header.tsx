@@ -5,8 +5,10 @@ import Markup from './Markup'
 function Header() {
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef(null);
+
+
     useEffect(() => {
-        window.addEventListener('scroll', () => {
+        const handleScroll = () => {
             let fromTop = window.scrollY;
             if (sectionRef.current) {
                 const rect = (sectionRef.current as HTMLElement).getBoundingClientRect();
@@ -17,8 +19,13 @@ function Header() {
                     setIsVisible(false);
                 }
             }
-        });
-    });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, [setIsVisible]);
 
 
     return (
@@ -33,6 +40,7 @@ function Header() {
                     <li key='contact'><a className={styles.navigation_item} href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <div style={{ paddingTop: isVisible ? '4rem' : '0' }}></div>
             <div className={styles.header_row}>
                 <div className={styles.header_column}>
                     <h1 className={styles.header_title}>Hello!
