@@ -5,8 +5,16 @@
   padding: 5rem 0;
 }
 
+.title {
+  align-content: top;
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+}
+
 .container_cards {
   display: flex;
+  justify-self: space-around;
   padding: 5rem;
 }
 
@@ -15,11 +23,11 @@
   flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  border-color: #fff;
-  border-width: 5px;
   margin: 1rem 2rem 1rem 2rem;
   background-color: #fff;
   padding: 10px;
+  
+  
 }
 
 .card p {
@@ -56,6 +64,7 @@
   transition: all .6s;
 }
 
+
 .container_img_with_tooltip .tooltip_text {
   visibility: hidden;
   width: 120px;
@@ -85,4 +94,29 @@
 
 .container_img_with_tooltip:hover .tooltip_text {
   visibility: visible;
+}
+
+@media (max-width: 75em) {
+  .container_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    margin: 1rem 0 1rem 0;
+    max-width: 50rem;
+  }
+
+  .container_logo_list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .container_img_with_tooltip {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
 }

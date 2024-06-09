@@ -33,15 +33,15 @@ function About() {
                 <h1 className={appStyles.heading} >About Me</h1>
 
             </div>
-            <div style={{ display: "flex", padding: '2px' }}>
+            <div className={styles.container_row}>
 
                 <div ref={containerAboutImageRef} className={styles.container_about_image}>
-                    <img className={styles.about_image} style={{ flex: "0" }} src={avatar} />
+                    <img className={styles.about_image} src={avatar} />
                 </div>
 
-                <div ref={containerAboutDescRef} className={styles.container_about} style={{ flex: "1", whiteSpace: '1px' }}>
+                <div ref={containerAboutDescRef} className={styles.container_about}>
 
-                    <h2 className={styles.sub_title_about_me} style={{ color: '#000', margin: '10px 0px', fontSize: 25 }}>
+                    <h2 className={styles.sub_title_about_me} >
                         Mobile Developer
                     </h2>
                     <p style={{ color: '#000' }}>

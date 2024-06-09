@@ -24,6 +24,17 @@
   background-color: black;
 }
 
+.sub_title_about_me {
+  color: '#000';
+  margin: 0.5rem 0;
+  font-size: 25;
+}
+
+.container_about {
+  flex: 1;
+  white-space: 1px;
+}
+
 .container_about p {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -31,6 +42,7 @@
 }
 
 .about_image {
+  flex: 0;
   --s: 350px;
   /* image size */
   --b: 6px;
@@ -86,8 +98,34 @@ img:hover {
   padding-top: 1rem
 }
 
+.container_row {
+  display: flex;
+  padding: 2px;
+}
+
 .container_item_box a:hover svg {
   transition: all 0.4s ease;
   transform: translateY(-6px);
   fill: rgb(1, 97, 239);
+}
+
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 75em) {
+  .container_row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+
 }
