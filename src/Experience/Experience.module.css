@@ -1,7 +1,7 @@
 .experience {
     display: flex;
     flex-direction: column;
-    padding: 1rem 2rem;
+    padding: 5rem 2rem;
     background-color: rgb(3 6 32);
 }
 
@@ -155,10 +155,11 @@ a {
         margin-right: 2rem;
         padding: 0;
     }
+
     .experience {
         padding: 1rem 0rem;
     }
-   
+
 
     .container_experiences {
         width: 100%;

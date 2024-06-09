@@ -26,10 +26,7 @@ function ProjectCard({ srcCourrency, title, description, isNotebook, links }: { 
 
     return (
         <div ref={projectItemRef} className={styles.project_item} >
-            <div className={styles.container_img}>
-                {imgs}
-
-            </div>
+            <div className={styles.container_img}>{imgs}</div>
             <div className={styles.container_texts} >
                 <h2 className={styles.title_project}>{title}</h2>
                 <p className={styles.description_project}>{description}</p>

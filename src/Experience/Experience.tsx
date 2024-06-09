@@ -21,7 +21,7 @@ function Experience() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: experienceRef.current,
-                start: "top top",
+                start: "top center",
             }
         });
         tl.from(headingRef.current, { y: 20, opacity: 0, duration: 0.5 })
