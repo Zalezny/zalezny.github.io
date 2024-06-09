@@ -4,8 +4,9 @@ import Markup from './Markup'
 
 function Header() {
     const [isVisible, setIsVisible] = useState(false);
+    const [isMenuClick, setMenuClick] = useState(false);
     const sectionRef = useRef(null);
-
+    const onMenuMobileClick = () => setMenuClick(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -30,16 +31,17 @@ function Header() {
 
     return (
         <header id='header' ref={sectionRef} >
-            <nav className={[styles.navigation, isVisible ? styles.sticky : null].join(' ')}>
-                <ul className={styles.navigation_list}>
-                    <li key='header'><a className={styles.navigation_item} href='#'>Home</a></li>
-                    <li key='about'><a className={styles.navigation_item} href='#about'>About</a></li>
-                    <li key='skills'><a className={styles.navigation_item} href="#skills">Skills</a></li>
-                    <li key='experience'><a className={styles.navigation_item} href="#experience">Experience</a></li>
-                    <li key='projects'><a className={styles.navigation_item} href="#projects">Projects</a></li>
-                    <li key='contact'><a className={styles.navigation_item} href="#contact">Contact</a></li>
+            <nav className={[styles.navigation, isVisible ? styles.sticky : null, isMenuClick ? styles.nav_list_active : null].join(' ')}>
+                <ul className={[styles.navigation_list, styles.nav_list_active].join(' ')}>
+                    <li key='header'><a className={styles.navigation_item} onClick={onMenuMobileClick} href='#'>Home</a></li>
+                    <li key='about'><a className={styles.navigation_item} onClick={onMenuMobileClick} href='#about'>About</a></li>
+                    <li key='skills'><a className={styles.navigation_item} onClick={onMenuMobileClick} href="#skills">Skills</a></li>
+                    <li key='experience'><a className={styles.navigation_item} onClick={onMenuMobileClick} href="#experience">Experience</a></li>
+                    <li key='projects'><a className={styles.navigation_item} onClick={onMenuMobileClick} href="#projects">Projects</a></li>
+                    <li key='contact'><a className={styles.navigation_item} onClick={onMenuMobileClick} href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <div className={styles.menu_btn_container} ><div className={styles.menu_btn} onClick={() => setMenuClick(!isMenuClick)}></div></div>
             <div style={{ paddingTop: isVisible ? '4rem' : '0' }}></div>
             <div className={styles.header_row}>
                 <div className={styles.header_column}>

@@ -1,7 +1,7 @@
 .experience {
     display: flex;
     flex-direction: column;
-    padding: 90px 2rem;
+    padding: 1rem 2rem;
     background-color: rgb(3 6 32);
 }
 
@@ -156,7 +156,7 @@ a {
         padding: 0;
     }
     .experience {
-        padding: 90px 0rem;
+        padding: 1rem 0rem;
     }
    
 

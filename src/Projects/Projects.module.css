@@ -112,12 +112,27 @@
 }
 
 @media (max-width: 600px) {
-
+    .container_img {
+        justify-content: center;
+        margin: 0;
+    }
     .container_img img {
         width: 100%;
     }
 
     .project_item {
         margin: 1rem
+    }
+
+    .container_btns {
+        margin: auto;
+    }
+
+    .title_project {
+        text-align: center;
+    }
+
+    .description_project {
+        text-align: center;
     }
 }
