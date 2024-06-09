@@ -6,28 +6,24 @@ function Header() {
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef(null);
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            const entry = entries[0];
-            setIsVisible(entry.isIntersecting);
-            console.log(isVisible);
-        },
-            {
-                threshold: 0.1
+        window.addEventListener('scroll', () => {
+            let fromTop = window.scrollY;
+            if (sectionRef.current) {
+                const rect = (sectionRef.current as HTMLElement).getBoundingClientRect();
+                let top = rect.height - 100
+                if (fromTop >= top) {
+                    setIsVisible(true);
+                } else {
+                    setIsVisible(false);
+                }
             }
-        );
-        if (sectionRef.current)
-            observer.observe(sectionRef.current);
-
-        return () => {
-            if (sectionRef.current)
-                observer.unobserve(sectionRef.current);
-        }
+        });
     });
 
 
     return (
-        <header id='header' ref={sectionRef}>
-            <nav className={isVisible ? styles.navigation : [styles.navigation, styles.sticky].join(' ')}>
+        <header id='header' ref={sectionRef} >
+            <nav className={[styles.navigation, isVisible ? styles.sticky : null].join(' ')}>
                 <ul className={styles.navigation_list}>
                     <li key='header'><a className={styles.navigation_item} href='#'>Home</a></li>
                     <li key='about'><a className={styles.navigation_item} href='#about'>About</a></li>
