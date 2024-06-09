@@ -5,7 +5,7 @@
     background-color: rgb(3 6 32);
 }
 
-a{
+a {
     text-decoration: none;
 
 }
@@ -34,17 +34,20 @@ a{
     padding-left: 0.5rem;
     padding-bottom: 2rem;
     padding-right: 2rem;
+    /* transition: all 0.3s ease; */
 }
 
 .container_row:hover {
-    transform: scale(1.05);
     transition: all 0.3s ease;
+    transform: scale(1.5);
     background-color: rgba(0, 255, 221, 0.195);
     cursor: pointer;
 }
 
 .container_row:hover h3 {
     color: rgb(70, 252, 225);
+    transform: translateY(-3px);
+
 }
 
 .container_row:hover svg {
@@ -101,8 +104,6 @@ a{
     color: rgb(70, 252, 225);
     font-family: 'Inter', sans-serif;
 }
-
-
 
 .bar {
     list-style: none;

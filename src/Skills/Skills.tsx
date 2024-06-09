@@ -61,8 +61,8 @@ function Skills() {
                 start: "top center",
             }
         });
-        tl.from(headingRef.current, { y: 10, opacity: 0, duration: 1 })
-        tl.from(cardsRef.current, { y: 40, opacity: 0, duration: 1 })
+        tl.from(headingRef.current, { y: 10, opacity: 0, duration: 0.5 })
+        tl.from(cardsRef.current, { y: 10, opacity: 0, duration: 0.5 })
     }, { scope: skillsRef })
 
     return (

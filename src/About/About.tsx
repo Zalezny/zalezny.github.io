@@ -54,18 +54,24 @@ function About() {
                         You can find more information about me below:
                     </p>
                     <div
-                        style={{ display: 'flex', justifyContent: 'space-around', width: '15rem', paddingTop: '1rem' }}>
-                        <a ref={githubRef} href='https://github.com/Zalezny'>
-                            <svg >
-                                <use xlinkHref="src/assets/sprite.svg#icon-github"></use>
-                            </svg>
+                        className={styles.container_items}>
+                        <div className={styles.container_item_box}>
+                            <a ref={githubRef} href='https://github.com/Zalezny'>
+                                <svg >
+                                    <use xlinkHref="src/assets/sprite.svg#icon-github"></use>
+                                </svg>
 
-                        </a>
-                        <a ref={linkedinRef} href='linkedin.com/in/zalezny/'>
-                            <svg>
-                                <use xlinkHref="src/assets/sprite.svg#icon-linkedin"></use>
-                            </svg>
-                        </a >
+                            </a>
+                        </div>
+
+                        <div className={styles.container_item_box}>
+                            <a ref={linkedinRef} href='linkedin.com/in/zalezny/'>
+                                <svg>
+                                    <use xlinkHref="src/assets/sprite.svg#icon-linkedin"></use>
+                                </svg>
+                            </a >
+                        </div>
+
                     </div>
 
                 </div>
