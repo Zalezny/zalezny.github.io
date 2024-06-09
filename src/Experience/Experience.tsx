@@ -24,10 +24,10 @@ function Experience() {
                 start: "top top",
             }
         });
-        tl.from(headingRef.current, { y: 20, opacity: 0, duration: 1 })
-        tl.from(internDevRef.current, { x: 20, opacity: 0, duration: 1 })
-        tl.from(flutterDevRef.current, { x: 20, opacity: 0, duration: 1 })
-        tl.from(mobileDevRef.current, { x: 20, opacity: 0, duration: 1 })
+        tl.from(headingRef.current, { y: 20, opacity: 0, duration: 0.5 })
+        tl.from(internDevRef.current, { x: 20, opacity: 0 }, "+=0.5")
+        tl.from(flutterDevRef.current, { x: 20, opacity: 0 }, "+=0.5")
+        tl.from(mobileDevRef.current, { x: 20, opacity: 0 }, "+=0.5")
 
     });
 
