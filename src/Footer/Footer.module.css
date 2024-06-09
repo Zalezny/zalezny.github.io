@@ -10,7 +10,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70rem;
+    width: 100%;
+
 }
 
 .about_container_icons_box {
