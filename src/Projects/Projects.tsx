@@ -12,13 +12,13 @@ function Projects() {
                         { btnName: 'Code', link: 'https://github.com/Zalezny/currency_app' },
                     ]}
                 />
-                <ProjectCard srcCourrency={['outfitflutter.png', 'outfitflutter1.png', 'outfitflutter2.png']} title='Katya Outfit' isNotebook={false} description='The Outfit App was developed for Katya RG Leotards, a small company specializing in creating gymnastics leotards. The aim of the application is to facilitate the registration process and gather information about the time required to create the leotards. Initially intended for Android, there is a possibility of expanding to iOS in the future. The app utilizes REST API data and synchronizes with a local Isar database. The demo version only supports a local database.'
+                <ProjectCard srcCourrency={['outfitflutter.png', 'outfitflutter1.png', 'outfitflutter2.png']} title='Katya Outfit' isNotebook={false} description='The Outfit App was developed for Katya RG Leotards, a small company specializing in creating gymnastics leotards. The aim of the application is to facilitate the registration process and gather information about the time required to create the leotards. Initially intended for Android, there is a possibility of expanding to iOS in the future. The app utilizes REST API data and synchronizes with a local Isar database. The application was created in Kotlin and then rewritten into Flutter. The demo version only supports a local database.'
                     links={[
                         { btnName: 'Flutter Code', link: 'https://github.com/Zalezny/outfit_flutter' },
                         { btnName: 'Kotlin Code', link: 'https://github.com/Zalezny/OutfitKatyas' },
                     ]}
                 />
-                <ProjectCard srcCourrency={['ordersflutter.png', 'ordersflutter1.png', 'ordersflutter2.png']} title='Katya Orders' isNotebook={false} description='The project was created for the company Katya RG Leotards to assist in managing orders. This app is connected to a database and retrieves information about orders and customers from an API. It also receives notifications for every state change when the app is turned off, turned on, or running in the foreground.'
+                <ProjectCard srcCourrency={['ordersflutter.png', 'ordersflutter1.png', 'ordersflutter2.png']} title='Katya Orders' isNotebook={false} description='The project was created for the company Katya RG Leotards to assist in managing orders. This app is connected to a database and retrieves information about orders and customers from an API. It also receives notifications for every state change when the app is turned off, turned on, or running in the foreground. The application was created in Kotlin and then rewritten into Flutter.'
                     links={[
                         { btnName: 'Flutter code', link: 'https://github.com/Zalezny/orders_flutter' },
                         { btnName: 'Kotlin code', link: 'https://github.com/Zalezny/OrderKatyas' },
