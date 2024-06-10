@@ -25,9 +25,9 @@ function Experience() {
             }
         });
         tl.from(headingRef.current, { y: 20, opacity: 0, duration: 0.5 })
-        tl.from(internDevRef.current, { x: 20, opacity: 0, duration: 0.5 })
-        tl.from(flutterDevRef.current, { x: 20, opacity: 0, duration: 0.5 })
-        tl.from(mobileDevRef.current, { x: 20, opacity: 0, duration: 0.5 })
+        tl.fromTo(internDevRef.current, { x: 20, opacity: 0, pointerEvents: 'none' }, { x: 0, opacity: 1, pointerEvents: 'auto' }, "+=0.5")
+        tl.fromTo(flutterDevRef.current, { x: 20, opacity: 0, pointerEvents: 'none' }, { x: 0, opacity: 1, pointerEvents: 'auto' }, "+=0.5")
+        tl.fromTo(mobileDevRef.current, { x: 20, opacity: 0, pointerEvents: 'none' }, { x: 0, opacity: 1, pointerEvents: 'auto' }, "+=0.5")
 
     });
 

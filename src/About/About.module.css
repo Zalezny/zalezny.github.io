@@ -124,11 +124,11 @@ img:hover {
 
   .about {
     margin-left: 5rem;
-    margin-right: 5rem;
+    margin-right: 5rem; 
   }
+
   .about_image {
     margin: auto auto;
-    padding-top: 0;
     padding-bottom: 2rem;
   }
 

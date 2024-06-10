@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './Header.module.css'
 import Markup from './Markup'
+import { useMediaQuery } from 'react-responsive';
 
 function Header() {
     const [isVisible, setIsVisible] = useState(false);
     const [isMenuClick, setMenuClick] = useState(false);
     const sectionRef = useRef(null);
     const onMenuMobileClick = () => setMenuClick(false);
+    const isMobile = useMediaQuery({ query: '(max-width: 650px)' });
 
     useEffect(() => {
         const handleScroll = () => {
@@ -41,8 +43,9 @@ function Header() {
                     <li key='contact'><a className={styles.navigation_item} onClick={onMenuMobileClick} href="#contact">Contact</a></li>
                 </ul>
             </nav>
+
             <div className={styles.menu_btn_container} ><div className={styles.menu_btn} onClick={() => setMenuClick(!isMenuClick)}></div></div>
-            <div style={{ paddingTop: isVisible ? '4rem' : '0' }}></div>
+            {isMobile ? null : <div style={{ paddingTop: isVisible ? '4rem' : '0' }}></div>}
             <div className={styles.header_row}>
                 <div className={styles.header_column}>
                     <h1 className={styles.header_title}>Hello!
