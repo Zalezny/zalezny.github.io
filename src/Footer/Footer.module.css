@@ -38,10 +38,14 @@
 
 .about_container_icons_box a {
     margin: 0;
+
+}
+
+.about_container_icons_box svg {
+    transition: all 0.4s ease;
 }
 
 .about_container_icons_box a:hover svg {
-    transition: all 0.4s ease;
 
     transform: translateY(-6px);
     fill: rgb(1, 97, 239);

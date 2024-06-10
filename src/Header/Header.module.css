@@ -69,7 +69,7 @@
 
 .header_description {
     font-size: 2rem;
-    line-height: 80px;
+    line-height: 4rem;
 }
 
 .header_description_primary {
@@ -218,5 +218,15 @@
 
     .nav_list_active li {
         margin-bottom: 3rem;
+    }
+
+    .header_title {
+        font-size: 2rem;
+        margin-right: 2rem;
+    }
+
+    .header_description {
+        font-size: 1.5rem;
+        line-height: 2rem;
     }
 }

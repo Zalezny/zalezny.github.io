@@ -1,11 +1,13 @@
+import { useMediaQuery } from 'react-responsive';
 import styles from './Skills.module.css';
 import { SkillLogo } from "./utils/SkillLogo.ts";
 
 function Card({ title, flex, logoList }: { title: string, flex: number, logoList: SkillLogo[] }) {
     const startPath = 'logos/';
+    const isMobile = useMediaQuery({ query: '(max-width: 650px)' });
 
     return (
-        <div className={styles.card} style={{width: flex == 1 ? '60%' : '100%'}} >
+        <div className={styles.card} style={{ width: !isMobile && flex == 1 ? '60%' : '100%' }} >
             <div className={styles.card_top}>
                 <h2 style={{ alignContent: 'top', textAlign: 'center', padding: '1rem', margin: 0 }}>{title}</h2>
             </div>
