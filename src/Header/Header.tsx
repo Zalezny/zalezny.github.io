@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './Header.module.css'
 import Markup from './Markup'
 import { useMediaQuery } from 'react-responsive';
+import { useTranslation } from 'react-i18next';
 
 function Header() {
     const [isVisible, setIsVisible] = useState(false);
@@ -9,6 +10,7 @@ function Header() {
     const sectionRef = useRef(null);
     const onMenuMobileClick = () => setMenuClick(false);
     const isMobile = useMediaQuery({ query: '(max-width: 650px)' });
+    const { t } = useTranslation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -35,12 +37,12 @@ function Header() {
         <header id='header' ref={sectionRef} >
             <nav className={[styles.navigation, isVisible ? styles.sticky : null, isMenuClick ? styles.nav_list_active : null].join(' ')}>
                 <ul className={[styles.navigation_list, styles.nav_list_active].join(' ')}>
-                    <li key='header'><a className={styles.navigation_item} onClick={onMenuMobileClick} href='#'>Home</a></li>
-                    <li key='about'><a className={styles.navigation_item} onClick={onMenuMobileClick} href='#about'>About</a></li>
-                    <li key='skills'><a className={styles.navigation_item} onClick={onMenuMobileClick} href="#skills">Skills</a></li>
-                    <li key='experience'><a className={styles.navigation_item} onClick={onMenuMobileClick} href="#experience">Experience</a></li>
-                    <li key='projects'><a className={styles.navigation_item} onClick={onMenuMobileClick} href="#projects">Projects</a></li>
-                    <li key='contact'><a className={styles.navigation_item} onClick={onMenuMobileClick} href="#contact">Contact</a></li>
+                    <li key='header'><a className={styles.navigation_item} onClick={onMenuMobileClick} href='#'>{t('Home')}</a></li>
+                    <li key='about'><a className={styles.navigation_item} onClick={onMenuMobileClick} href='#about'>{t('About')}</a></li>
+                    <li key='skills'><a className={styles.navigation_item} onClick={onMenuMobileClick} href="#skills">{t('Skills')}</a></li>
+                    <li key='experience'><a className={styles.navigation_item} onClick={onMenuMobileClick} href="#experience">{t('Experience')}</a></li>
+                    <li key='projects'><a className={styles.navigation_item} onClick={onMenuMobileClick} href="#projects">{t('Projects')}</a></li>
+                    <li key='contact'><a className={styles.navigation_item} onClick={onMenuMobileClick} href="#contact">{t('Contact')}</a></li>
                 </ul>
             </nav>
 
@@ -48,11 +50,11 @@ function Header() {
             {isMobile ? null : <div style={{ paddingTop: isVisible ? '4rem' : '0' }}></div>}
             <div className={styles.header_row}>
                 <div className={styles.header_column}>
-                    <h1 className={styles.header_title}>Hello!
+                    <h1 className={styles.header_title}>{t('Hello')}
                         <h2 className={styles.header_description}>
-                            I'm Daniel Nowak,
+                            {t('HeaderDescriptionOne')}
                             <span className={styles.header_description_primary}>
-                                specializing in Mobile & VR apps
+                                {t('HeaderDescriptionTwo')}
                             </span>
                         </h2>
                     </h1>

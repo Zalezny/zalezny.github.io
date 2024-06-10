@@ -5,6 +5,9 @@ import Footer from '../Footer/Footer.tsx';
 import Header from '../Header/Header.tsx';
 import Projects from '../Projects/Projects.tsx';
 import Skills from '../Skills/Skills.tsx';
+import geni18n from '../i18n.tsx';
+
+geni18n();
 
 function App() {
 

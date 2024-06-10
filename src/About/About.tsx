@@ -5,6 +5,7 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import avatar from '../assets/avatar.png'
+import { useTranslation } from 'react-i18next';
 gsap.registerPlugin(ScrollTrigger);
 
 function About() {
@@ -14,6 +15,7 @@ function About() {
     const githubRef = useRef(null);
     const headingRef = useRef(null);
     const linkedinRef = useRef(null);
+    const { t } = useTranslation();
     useGSAP(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -30,7 +32,7 @@ function About() {
     return (
         <section ref={aboutRef} id='about' className={styles.about}>
             <div ref={headingRef} className={styles.heading}>
-                <h1 className={appStyles.heading} >About Me</h1>
+                <h1 className={appStyles.heading} >{t('AboutMe')}</h1>
 
             </div>
             <div className={styles.container_row}>
@@ -45,13 +47,13 @@ function About() {
                         Mobile Developer
                     </h2>
                     <p style={{ color: '#000' }}>
-                        A passionate enthusiast of well-written code and new technologies. A person with a strong inclination towards learning and a desire for continuous development. In my work, I prioritize quality and attention to detail. I gain my knowledge by creating and improving numerous mobile applications using technologies such as Flutter, Kotlin, and Swift.
+                        {t('AboutMeDescriptionOne')}
                     </p>
                     <p>
-                        On a daily basis, I work as a Mobile Developer, creating mobile applications for Android and iOS using the Flutter framework. I also work on VR applications for Apple's Vision Pro device.
+                        {t('AboutMeDescriptionTwo')}
                     </p>
                     <p>
-                        You can find more information about me below:
+                        {t('AboutMeDescriptionThree')}
                     </p>
                     <div
                         className={styles.container_items}>

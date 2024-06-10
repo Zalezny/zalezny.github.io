@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import styles from './Contact.module.css';
+import { t } from 'i18next';
 const ContactForm = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [stateMessage, setStateMessage] = useState(null as string | null);
@@ -17,11 +18,11 @@ const ContactForm = () => {
                 () => {
                     console.log('SUCCESS!');
                     setIsSubmitting(true);
-                    setStateMessage('Thank you for your message. I will get back to you as soon as possible');
+                    setStateMessage(t('ThankYouMsg'));
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
-                    setStateMessage('Sorry, there was an error. Please try again later or write directly to me: danielnowax@gmail.com');
+                    setStateMessage(t('FailedMsg'));
                 },
             );
     };
@@ -37,19 +38,19 @@ const ContactForm = () => {
 
                 <form ref={formRef} className={styles.contact_form} onSubmit={sendEmail}>
                     <div className={styles.label_form_container}>
-                        <label className={styles.label_form}>Name</label>
-                        <input className={styles.input_form} type="text" name="sender_name" placeholder='Enter Your Name' disabled={isSubmitting} />
+                        <label className={styles.label_form}>{t('Name')}</label>
+                        <input className={styles.input_form} type="text" name="sender_name" placeholder={t('EnterName')} disabled={isSubmitting} />
                     </div>
                     <div className={styles.label_form_container}>
-                        <label className={styles.label_form}>Email</label>
-                        <input className={styles.input_form} type="email" name="sender_email" placeholder='Enter Your Email' disabled={isSubmitting}/>
+                        <label className={styles.label_form}>{t('Email')}</label>
+                        <input className={styles.input_form} type="email" name="sender_email" placeholder={t('EnterEmail')} disabled={isSubmitting} />
                     </div>
                     <div className={styles.label_form_container}>
-                        <label className={styles.label_form} aria-placeholder='Enter Your Message'>Message</label>
-                        <textarea className={styles.input_form} name="message" cols={30} rows={10} placeholder='Enter Your Message' disabled={isSubmitting} />
+                        <label className={styles.label_form} aria-placeholder='Enter Your Message'>{t('Message')}</label>
+                        <textarea className={styles.input_form} name="message" cols={30} rows={10} placeholder={t('EnterMsg')} disabled={isSubmitting} />
                     </div>
 
-                    <input className={styles.submit_btn} type="submit" value="Submit" disabled={isSubmitting}/>
+                    <input className={styles.submit_btn} type="submit" value={t('Submit')} disabled={isSubmitting} />
                 </form>
             </div>
 

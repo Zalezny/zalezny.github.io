@@ -5,6 +5,7 @@ import appStyles from '../App/App.module.css';
 import { useGSAP } from "@gsap/react";
 import { useRef } from 'react';
 import { gsap } from 'gsap';
+import { t } from "i18next";
 
 function Skills() {
 
@@ -67,7 +68,7 @@ function Skills() {
 
     return (
         <section ref={skillsRef} id="skills" className={styles.skills}>
-            <h2 ref={headingRef} className={appStyles.heading}>Skills</h2>
+            <h2 ref={headingRef} className={appStyles.heading}>{t('Skills')}</h2>
             <div ref={cardsRef} className={styles.container_cards}>
                 <Card key={'backend'} title="Backend" flex={1} logoList={backend} />
                 <Card key={'frontend'} title="Frontend" flex={1} logoList={frontend} />

@@ -6,6 +6,7 @@ import expAnimation from "../assets/exp.json";
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import { useRef } from 'react';
+import { t } from 'i18next';
 
 
 // https://lottiefiles.com/animations/user-experience-G6cCp0ZCAU?from=search
@@ -33,7 +34,7 @@ function Experience() {
 
     return (
         <section ref={experienceRef} id='experience' className={styles.experience}>
-            <h1 ref={headingRef} className={appStyles.heading}>Experience</h1>
+            <h1 ref={headingRef} className={appStyles.heading}>{t('Experience')}</h1>
             <div className={styles.container}>
 
                 <div className={styles.container_header}>
@@ -41,9 +42,9 @@ function Experience() {
                 </div>
                 <div ref={skillsContainerRef} className={styles.container_experiences}>
                     <ul className={styles.bar}>
-                        <li key='mobile dev'><ExperienceCard containerRowRef={mobileDevRef} link="https://goodsoft.pl/" title="Mobile Developer · Goodsoft" dateStart="10.2023" dateEnd="now" description="Building, styling, and maintaining clean code for high-quality mobile and VR applications. One of my major projects was the creation and release of the Erevie app, which is related to the real estate market." skillsUsed={["Flutter", "Dart", "GetIt", "Bloc", "Firebase", "VisionOS", "ARKit", "RealityKit", "Swift", "AdMob", "Testing", "AutoRoute"]} /></li>
-                        <li key='junior flutter'><ExperienceCard containerRowRef={flutterDevRef} link='https://ilaresoft.com/' title="Junior Flutter Developer · Ilaresoft" dateStart="08.2022" dateEnd="09.2023" description="Developed and styled mobile applications for Vocale, a company in the music industry similar to Spotify, and created and maintained mobile applications for clients, including the Play&Plug app for finding electric chargers." skillsUsed={["Flutter", "Dart", "Bloc", "Provider", "Firebase", "GraphQL", "Freezed"]} /></li>
-                        <li key='intern android'><ExperienceCard containerRowRef={internDevRef} link='https://safetyheads.com/' title="Intern Android Developer · SafetyHeads" dateStart="01.2023" dateEnd="06.2023" description="Expanding knowledge and actively developing an internal application for company employees using Clean Architecture and MVVM." skillsUsed={["Kotlin", "Clean Architecture", "MVVM", "Koin", "Coroutines", "Flow", "Firebase", "Lottie"]} /></li>
+                        <li key='mobile dev'><ExperienceCard containerRowRef={mobileDevRef} link="https://goodsoft.pl/" title="Mobile Developer · Goodsoft" dateStart="10.2023" dateEnd="now" description={t('GoodsoftJobDescription')} skillsUsed={["Flutter", "Dart", "GetIt", "Bloc", "Firebase", "VisionOS", "ARKit", "RealityKit", "Swift", "AdMob", "Testing", "AutoRoute"]} /></li>
+                        <li key='junior flutter'><ExperienceCard containerRowRef={flutterDevRef} link='https://ilaresoft.com/' title="Junior Flutter Developer · Ilaresoft" dateStart="08.2022" dateEnd="09.2023" description={t('IlaresoftJobDescription')} skillsUsed={["Flutter", "Dart", "Bloc", "Provider", "Firebase", "GraphQL", "Freezed"]} /></li>
+                        <li key='intern android'><ExperienceCard containerRowRef={internDevRef} link='https://safetyheads.com/' title="Intern Android Developer · SafetyHeads" dateStart="01.2023" dateEnd="06.2023" description={t('SafetyheadsJobDescription')} skillsUsed={["Kotlin", "Clean Architecture", "MVVM", "Koin", "Coroutines", "Flow", "Firebase", "Lottie"]} /></li>
                     </ul>
 
 
