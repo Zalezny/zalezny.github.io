@@ -67,7 +67,7 @@ function About() {
                         </div>
 
                         <div className={styles.container_item_box}>
-                            <a ref={linkedinRef} href='linkedin.com/in/zalezny/'>
+                            <a ref={linkedinRef} href='https://linkedin.com/in/zalezny/'>
                                 <svg>
                                     <use xlinkHref="assets/sprite.svg#icon-linkedin"></use>
                                 </svg>
