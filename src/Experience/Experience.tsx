@@ -18,6 +18,7 @@ function Experience() {
     const mobileDevRef = useRef(null);
     const flutterDevRef = useRef(null);
     const internDevRef = useRef(null);
+    const katyaDevRef = useRef(null);
     useGSAP(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -25,10 +26,11 @@ function Experience() {
                 start: "top center",
             }
         });
-        tl.from(headingRef.current, { y: 20, opacity: 0, duration: 0.5 })
-        tl.fromTo(internDevRef.current, { x: 20, opacity: 0, pointerEvents: 'none' }, { x: 0, opacity: 1, pointerEvents: 'auto' }, "+=0.5")
-        tl.fromTo(flutterDevRef.current, { x: 20, opacity: 0, pointerEvents: 'none' }, { x: 0, opacity: 1, pointerEvents: 'auto' }, "+=0.5")
-        tl.fromTo(mobileDevRef.current, { x: 20, opacity: 0, pointerEvents: 'none' }, { x: 0, opacity: 1, pointerEvents: 'auto' }, "+=0.5")
+        tl.from(headingRef.current, { y: 20, opacity: 0, duration: 0.4 })
+        tl.fromTo(mobileDevRef.current, { x: 20, opacity: 0, pointerEvents: 'none' }, { x: 0, opacity: 1, pointerEvents: 'auto' }, "+=0.2")
+        tl.fromTo(flutterDevRef.current, { x: 20, opacity: 0, pointerEvents: 'none' }, { x: 0, opacity: 1, pointerEvents: 'auto' }, "+=0.2")
+        tl.fromTo(internDevRef.current, { x: 20, opacity: 0, pointerEvents: 'none' }, { x: 0, opacity: 1, pointerEvents: 'auto' }, "+=0.2")
+        tl.fromTo(katyaDevRef.current, { x: 20, opacity: 0, pointerEvents: 'none' }, { x: 0, opacity: 1, pointerEvents: 'auto' }, "+=0.2")
 
     });
 
@@ -45,6 +47,7 @@ function Experience() {
                         <li key='mobile dev'><ExperienceCard containerRowRef={mobileDevRef} link="https://goodsoft.pl/" title="Mobile Developer · Goodsoft" dateStart="10.2023" dateEnd="now" description={t('GoodsoftJobDescription')} skillsUsed={["Flutter", "Dart", "GetIt", "Bloc", "Firebase", "VisionOS", "ARKit", "RealityKit", "Swift", "AdMob", "Testing", "AutoRoute"]} /></li>
                         <li key='junior flutter'><ExperienceCard containerRowRef={flutterDevRef} link='https://ilaresoft.com/' title="Junior Flutter Developer · Ilaresoft" dateStart="08.2022" dateEnd="09.2023" description={t('IlaresoftJobDescription')} skillsUsed={["Flutter", "Dart", "Bloc", "Provider", "Firebase", "GraphQL", "Freezed"]} /></li>
                         <li key='intern android'><ExperienceCard containerRowRef={internDevRef} link='https://safetyheads.com/' title="Intern Android Developer · SafetyHeads" dateStart="01.2023" dateEnd="06.2023" description={t('SafetyheadsJobDescription')} skillsUsed={["Kotlin", "Clean Architecture", "MVVM", "Koin", "Coroutines", "Flow", "Firebase", "Lottie"]} /></li>
+                        <li key='junior mobile'><ExperienceCard containerRowRef={katyaDevRef} link='https://katya-rg.eu/' title="Junior Mobile Developer · Katya RG Leotards" dateStart="01.2022" dateEnd="08.2022" description={t('KatyaJobDescription')} skillsUsed={["Kotlin", "Clean Architecture", "MVVM", "Dart", "Flutter", "Services", "Firebase FCM", "Android SDK"]} /></li>
                     </ul>
 
 

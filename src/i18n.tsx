@@ -38,6 +38,7 @@ function geni18n() {
                     "EnterEmail": "Enter Your Email",
                     "EnterMsg": "Enter Your Message",
                     "Submit": "Submit",
+                    "KatyaJobDescription": "Developed and styled mobile applications for Katya RG Leotards, a company specializing in creating gymnastics leotards.",
                 }
             }
         },
