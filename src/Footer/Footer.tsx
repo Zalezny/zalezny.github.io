@@ -26,7 +26,7 @@ function Footer() {
 
             </div>
             <span className={styles.copyright}>Daniel Nowak
-                <span className={styles.copyright_date}> ©2024</span>
+                <span className={styles.copyright_date}> ©2025</span>
 
             </span>
 

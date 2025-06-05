@@ -41,14 +41,17 @@ function Skills() {
         new SkillLogo('RealityKit', 'realitykit.png'),
         new SkillLogo('Composer Pro', 'composerpro.png'),
         new SkillLogo('Xcode', 'xcode.png'),
-        new SkillLogo('Blender', 'blender.png'),
+        new SkillLogo('Meta', 'meta.png'),
+        new SkillLogo('Unity', 'unity.png'),
     ];
 
     const other: SkillLogo[] = [
         new SkillLogo('C', 'ce.png'),
         new SkillLogo('C++', 'cpp.png'),
+        new SkillLogo('C#', 'csharp.png'),
         new SkillLogo('VS Code', 'vscode.png'),
         new SkillLogo('Android Studio', 'androidstudio.webp'),
+        new SkillLogo('Cursor', 'cursor.png'),
     ];
 
     const skillsRef = useRef(null);
@@ -73,7 +76,7 @@ function Skills() {
                 <Card key={'backend'} title="Backend" flex={1} logoList={backend} />
                 <Card key={'frontend'} title="Frontend" flex={1} logoList={frontend} />
                 <Card key={'mobile'} title="Mobile" flex={1.5} logoList={mobile} />
-                <Card key={'vr'} title="VR" flex={1} logoList={vr} />
+                <Card key={'xr'} title="XR" flex={1} logoList={vr} />
                 <Card key={'other'} title="Other" flex={1} logoList={other} />
             </div>
         </section>
